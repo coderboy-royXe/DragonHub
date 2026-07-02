@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dragon's Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div id="clock"></div>
+<canvas id="particles"></canvas>
+
+<div id="cursor"></div>
+
+<div class="login-box">
+
+<h1>🐉 Dragon's Hub</h1>
+
+<input type="text" id="username" placeholder="Username">
+
+<div class="password-box">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button
+class="eye"
+onclick="togglePassword()">
+
+👁️
+
+</button>
+
+</div>>
+
+<button
+onclick="login()">
+
+LOGIN
+
+</button>
+
+<p class="hint">
+
+Username : ADMIN
+
+<br>
+
+Password : password
+
+</p>
+
+<p id="error"></p>
+
+</div>
+
+<script src="script.js"></script>
+<div id="achievement">
+
+🏆 Achievement Unlocked
+
+<p id="achievementText">
+
+Welcome!
+
+</p>
+
+</div>
+</body>
+
+</html>

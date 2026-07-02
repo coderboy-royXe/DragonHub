@@ -1,0 +1,444 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(-45deg,#050816,#0a1f44,#001f3f,#0b1026);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+
+overflow:hidden;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.login-box{
+
+width:360px;
+
+padding:35px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(18px);
+
+border-radius:20px;
+
+box-shadow:0 0 35px rgba(0,170,255,.4);
+
+text-align:center;
+
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0px);
+}
+
+}
+
+h1{
+
+color:white;
+
+margin-bottom:25px;
+
+text-shadow:0 0 15px cyan;
+
+}
+
+input{
+
+width:100%;
+
+padding:14px;
+
+margin:10px 0;
+
+border:none;
+
+border-radius:10px;
+
+background:#1b1b1b;
+
+color:white;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+input:focus{
+
+box-shadow:0 0 15px cyan;
+
+}
+
+button{
+
+width:100%;
+
+padding:14px;
+
+margin-top:18px;
+
+font-size:17px;
+
+font-weight:bold;
+
+background:#00aaff;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+background:#008cff;
+
+box-shadow:0 0 25px cyan;
+
+}
+
+#error{
+
+margin-top:15px;
+
+color:#ff4d4d;
+
+font-weight:bold;
+
+}
+/* PASSWORD BOX */
+
+.password-box{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin:10px 0;
+
+}
+
+.password-box input{
+
+flex:1;
+
+margin:0;
+
+}
+
+.eye{
+
+width:55px;
+
+height:48px;
+
+border:none;
+
+border-radius:10px;
+
+background:#00aaff;
+
+cursor:pointer;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.eye:hover{
+
+background:#008cff;
+
+box-shadow:0 0 15px cyan;
+
+}
+
+/* LOGIN HINT */
+
+.hint{
+
+margin-top:15px;
+
+color:#9fdcff;
+
+font-size:14px;
+
+}
+
+/* LIVE CLOCK */
+
+#clock{
+
+position:absolute;
+
+top:20px;
+
+right:20px;
+
+background:rgba(255,255,255,.08);
+
+padding:12px 18px;
+
+border-radius:12px;
+
+color:white;
+
+font-size:18px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 15px cyan;
+
+font-weight:bold;
+
+}
+/* ========================= */
+/* PARTICLE BACKGROUND */
+/* ========================= */
+
+#particles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-2;
+
+}
+
+/* ========================= */
+/* CUSTOM CURSOR */
+/* ========================= */
+
+#cursor{
+
+position:fixed;
+
+width:20px;
+height:20px;
+
+border:2px solid cyan;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+box-shadow:
+0 0 10px cyan,
+0 0 20px cyan,
+0 0 35px cyan;
+
+transition:
+transform .05s linear;
+
+z-index:9999;
+
+}
+
+/* ========================= */
+/* RGB NAVBAR */
+/* ========================= */
+
+nav{
+
+background:rgba(0,0,0,.55);
+
+backdrop-filter:blur(18px);
+
+border-bottom:2px solid cyan;
+
+box-shadow:
+
+0 0 20px cyan,
+
+0 0 40px #00aaff;
+
+animation:rgbGlow 5s linear infinite;
+
+}
+
+@keyframes rgbGlow{
+
+0%{
+
+box-shadow:
+0 0 20px cyan,
+0 0 40px cyan;
+
+}
+
+50%{
+
+box-shadow:
+0 0 20px #00aaff,
+0 0 40px #008cff;
+
+}
+
+100%{
+
+box-shadow:
+0 0 20px cyan,
+0 0 40px cyan;
+
+}
+
+}
+
+/* ========================= */
+/* GLASS CARDS */
+/* ========================= */
+
+#content{
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+width:80%;
+
+margin:35px auto;
+
+padding:30px;
+
+box-shadow:
+
+0 0 30px rgba(0,255,255,.2);
+
+animation:fade .5s;
+
+}
+/* ========================= */
+/* ACHIEVEMENT POPUP */
+/* ========================= */
+
+#achievement{
+
+position:fixed;
+
+bottom:-180px;
+right:25px;
+
+width:320px;
+
+background:rgba(20,20,20,.95);
+
+backdrop-filter:blur(18px);
+
+border-left:6px solid cyan;
+
+padding:20px;
+
+border-radius:18px;
+
+color:white;
+
+box-shadow:
+0 0 20px cyan,
+0 0 40px rgba(0,255,255,.4);
+
+transition:.6s;
+
+z-index:99999;
+
+}
+
+#achievement h3{
+
+margin:0;
+
+font-size:22px;
+
+color:cyan;
+
+}
+
+#achievement p{
+
+margin-top:10px;
+
+font-size:16px;
+
+color:#ddd;
+
+}
+
+.showAchievement{
+
+bottom:25px !important;
+
+animation:achievementGlow 1.5s infinite alternate;
+
+}
+
+@keyframes achievementGlow{
+
+from{
+
+box-shadow:
+0 0 20px cyan;
+
+}
+
+to{
+
+box-shadow:
+0 0 35px cyan,
+0 0 60px #00aaff;
+
+}
+
+}
